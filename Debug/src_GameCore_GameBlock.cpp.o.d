@@ -206,7 +206,8 @@ Debug/src_GameCore_GameBlock.cpp.o: src/GameCore/GameBlock.cpp \
  src/GameCore/../GLWidget2D.h src/GameCore/../GLWidget.h \
  src/GameCore/../GLShader.h src/GameCore/../Mesh.h \
  ../../../gl_env/include/GLFW/glfw3.h src/GameCore/GameAnimal.h \
- src/GameCore/../GLShader.h src/GameCore/Game2DMesh.h
+ src/GameCore/../GLShader.h src/GameCore/Game2DMesh.h \
+ src/GameCore/../GLAnimal.h
 
 src/GameCore/GameBlock.h:
 
@@ -637,3 +638,5 @@ src/GameCore/GameAnimal.h:
 src/GameCore/../GLShader.h:
 
 src/GameCore/Game2DMesh.h:
+
+src/GameCore/../GLAnimal.h:

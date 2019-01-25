@@ -36,6 +36,14 @@ GLuint GameBlockButton::getTexture()
 {
 	return pictureID;
 }
+void GameBlockButton::bindAnimal(GameAnimal animal)
+{
+	widget_frame = animal.getMesh();
+	shader = animal.getShader();
+	pictureID = animal.getTexture();
+	modelID = glGetUniformLocation(shader.ShaderProgram, "model");
+	button_animal = animal;
+}
 GameBlockButton::~GameBlockButton()
 {
 }

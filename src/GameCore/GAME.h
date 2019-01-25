@@ -27,14 +27,34 @@ struct Block_Animal
 	GameAnimal animal;
 	int floor;
 };
+struct RawTexture
+{
+	//贴图
+	GLuint texture;
+	//动画张数
+	GLuint texture_num;
+	//地图显示层数
+	int floor;
+	
+};
+struct AnimalInfo
+{
+	GameAnimal animal;
+	RawTexture texture;
+	GLuint mesh;
+	GLuint shader;
+	int num;
+	int isAnim;
+};
 class GAME
 {
 public:
 	GAME();
-	static vector<GameAnimal> global_animal;
-	static vector<Block_Animal> global_block;
-	static vector<Game2DMesh> global_gameMesh;
-	static void loadBlockInfo(const char * filename);
+	static vector<AnimalInfo> global_animal;
+	static vector<Game2DMesh> global_gameMesh;//网格资源
+	static vector<RawTexture>global_texture;
+	static vector<GLShader> global_shader;
+	static void loadResource();
 	~GAME();
 
 };

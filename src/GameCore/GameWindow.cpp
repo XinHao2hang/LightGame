@@ -37,9 +37,8 @@ void GameWindow::Run()
 {
 	//GLuint fbo;
 	//glGenFramebuffersEXT(1,&fbo);
-	initShader();
-	GAME::loadBlockInfo("block\\blockinfo.inf");
-	start_scene.initScene();
+	GAME::loadResource();
+	//start_scene.initScene();
 	edit_scene.initScene();
 	TOOLS::nowScene = &edit_scene;
 	//窗口绘制循环

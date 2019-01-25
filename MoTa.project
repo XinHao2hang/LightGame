@@ -8,6 +8,8 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
+    <File Name="src/GLAnimal.cpp"/>
+    <File Name="src/GLAnimal.h"/>
     <File Name="src/GLButton.h"/>
     <File Name="src/GLButton.cpp"/>
     <File Name="src/Mesh.h"/>

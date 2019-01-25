@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=YL
-Date                   :=2019/1/24
+Date                   :=2019/1/25
 CodeLitePath           :="D:/Program Files/CodeLite"
 LinkerName             :=g++
 SharedObjectLinkerName :=g++ -shared -fPIC
@@ -62,8 +62,9 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=D:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/src_GameCore_GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLWidget.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_Game2DMesh.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_TOOLS.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLShader.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLScene.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GAME.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLWidget2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLButton.cpp$(ObjectSuffix) $(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Mesh.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameBlock.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameAnimal.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_EventGameMap.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameMap.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_EditSence.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/src_GameCore_GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLWidget.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_Game2DMesh.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_TOOLS.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLShader.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLScene.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLAnimal.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GAME.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/src_GLWidget2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GLButton.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_Mesh.cpp$(ObjectSuffix) $(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameBlock.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameAnimal.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_EventGameMap.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_GameMap.cpp$(ObjectSuffix) $(IntermediateDirectory)/src_GameCore_EditSence.cpp$(ObjectSuffix) \
+	
 
 
 
@@ -101,6 +102,14 @@ $(IntermediateDirectory)/src_GameCore_GameWindow.cpp$(DependSuffix): src/GameCor
 
 $(IntermediateDirectory)/src_GameCore_GameWindow.cpp$(PreprocessSuffix): src/GameCore/GameWindow.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_GameWindow.cpp$(PreprocessSuffix) src/GameCore/GameWindow.cpp
+
+$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix): src/GameCore/StartScene.cpp $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GameCore/StartScene.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix): src/GameCore/StartScene.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix) -MM src/GameCore/StartScene.cpp
+
+$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(PreprocessSuffix): src/GameCore/StartScene.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(PreprocessSuffix) src/GameCore/StartScene.cpp
 
 $(IntermediateDirectory)/src_GLWidget.cpp$(ObjectSuffix): src/GLWidget.cpp $(IntermediateDirectory)/src_GLWidget.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GLWidget.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GLWidget.cpp$(ObjectSuffix) $(IncludePath)
@@ -142,6 +151,22 @@ $(IntermediateDirectory)/src_GLScene.cpp$(DependSuffix): src/GLScene.cpp
 $(IntermediateDirectory)/src_GLScene.cpp$(PreprocessSuffix): src/GLScene.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GLScene.cpp$(PreprocessSuffix) src/GLScene.cpp
 
+$(IntermediateDirectory)/src_GLAnimal.cpp$(ObjectSuffix): src/GLAnimal.cpp $(IntermediateDirectory)/src_GLAnimal.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GLAnimal.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GLAnimal.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GLAnimal.cpp$(DependSuffix): src/GLAnimal.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GLAnimal.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GLAnimal.cpp$(DependSuffix) -MM src/GLAnimal.cpp
+
+$(IntermediateDirectory)/src_GLAnimal.cpp$(PreprocessSuffix): src/GLAnimal.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GLAnimal.cpp$(PreprocessSuffix) src/GLAnimal.cpp
+
+$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix): src/GameCore/GameBlockButton.cpp $(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GameCore/GameBlockButton.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix): src/GameCore/GameBlockButton.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix) -MM src/GameCore/GameBlockButton.cpp
+
+$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(PreprocessSuffix): src/GameCore/GameBlockButton.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(PreprocessSuffix) src/GameCore/GameBlockButton.cpp
+
 $(IntermediateDirectory)/src_GameCore_GAME.cpp$(ObjectSuffix): src/GameCore/GAME.cpp $(IntermediateDirectory)/src_GameCore_GAME.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GameCore/GAME.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameCore_GAME.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_GameCore_GAME.cpp$(DependSuffix): src/GameCore/GAME.cpp
@@ -166,22 +191,6 @@ $(IntermediateDirectory)/src_GLButton.cpp$(DependSuffix): src/GLButton.cpp
 $(IntermediateDirectory)/src_GLButton.cpp$(PreprocessSuffix): src/GLButton.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GLButton.cpp$(PreprocessSuffix) src/GLButton.cpp
 
-$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix): GLWindow.cpp $(IntermediateDirectory)/GLWindow.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/GLWindow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/GLWindow.cpp$(DependSuffix): GLWindow.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GLWindow.cpp$(DependSuffix) -MM GLWindow.cpp
-
-$(IntermediateDirectory)/GLWindow.cpp$(PreprocessSuffix): GLWindow.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GLWindow.cpp$(PreprocessSuffix) GLWindow.cpp
-
-$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix): src/GameCore/GameBlockButton.cpp $(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GameCore/GameBlockButton.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix): src/GameCore/GameBlockButton.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(DependSuffix) -MM src/GameCore/GameBlockButton.cpp
-
-$(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(PreprocessSuffix): src/GameCore/GameBlockButton.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_GameBlockButton.cpp$(PreprocessSuffix) src/GameCore/GameBlockButton.cpp
-
 $(IntermediateDirectory)/src_Mesh.cpp$(ObjectSuffix): src/Mesh.cpp $(IntermediateDirectory)/src_Mesh.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/Mesh.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_Mesh.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/src_Mesh.cpp$(DependSuffix): src/Mesh.cpp
@@ -189,6 +198,14 @@ $(IntermediateDirectory)/src_Mesh.cpp$(DependSuffix): src/Mesh.cpp
 
 $(IntermediateDirectory)/src_Mesh.cpp$(PreprocessSuffix): src/Mesh.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_Mesh.cpp$(PreprocessSuffix) src/Mesh.cpp
+
+$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix): GLWindow.cpp $(IntermediateDirectory)/GLWindow.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/GLWindow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/GLWindow.cpp$(DependSuffix): GLWindow.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GLWindow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GLWindow.cpp$(DependSuffix) -MM GLWindow.cpp
+
+$(IntermediateDirectory)/GLWindow.cpp$(PreprocessSuffix): GLWindow.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GLWindow.cpp$(PreprocessSuffix) GLWindow.cpp
 
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
@@ -237,14 +254,6 @@ $(IntermediateDirectory)/src_GameCore_EditSence.cpp$(DependSuffix): src/GameCore
 
 $(IntermediateDirectory)/src_GameCore_EditSence.cpp$(PreprocessSuffix): src/GameCore/EditSence.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_EditSence.cpp$(PreprocessSuffix) src/GameCore/EditSence.cpp
-
-$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix): src/GameCore/StartScene.cpp $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "D:/OpenGL/Game/Game/MoTa/src/GameCore/StartScene.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix): src/GameCore/StartScene.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(DependSuffix) -MM src/GameCore/StartScene.cpp
-
-$(IntermediateDirectory)/src_GameCore_StartScene.cpp$(PreprocessSuffix): src/GameCore/StartScene.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/src_GameCore_StartScene.cpp$(PreprocessSuffix) src/GameCore/StartScene.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

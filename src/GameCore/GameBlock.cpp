@@ -21,8 +21,11 @@ void GameBlock::setTexture(GLuint textureID)
 }
 void GameBlock::draw()
 {
+
 	if(texture==-1)
 		return;
+	if(isGlobalTimer == true)
+		block_animal.animal();
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glBindTexture(GL_TEXTURE_2D,texture);
@@ -30,7 +33,8 @@ void GameBlock::draw()
 	//位置
 	glUniformMatrix4fv(modelID, 1, GL_FALSE, (GLfloat*)glm::value_ptr(model_mat));
 	block_mesh.draw();
-	//glUseProgram(0);
+	
+	glUseProgram(0);
 }
 void GameBlock::bindAnimal(GameAnimal animal)
 {
@@ -38,6 +42,7 @@ void GameBlock::bindAnimal(GameAnimal animal)
 	shader = animal.getShader();
 	texture = animal.getTexture();
 	modelID = glGetUniformLocation(shader.ShaderProgram, "model");
+	block_animal = animal;
 }
 GameBlock::~GameBlock()
 {

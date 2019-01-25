@@ -154,7 +154,8 @@ Debug/src_GameCore_GAME.cpp.o: src/GameCore/GAME.cpp src/GameCore/GAME.h \
  ../../../gl_env/include/glm/detail/func_integer.inl \
  ../../../gl_env/include/glm/detail/func_integer_simd.inl \
  d:\opengl\gl_env\include\glm\simd\integer.h \
- ../../../gl_env/include/GLFW/glfw3.h src/GameCore/GameBlock.h \
+ ../../../gl_env/include/GLFW/glfw3.h src/GameCore/../GLAnimal.h \
+ src/GameCore/GameBlock.h \
  ../../../gl_env/include/glm/gtc/matrix_transform.hpp \
  d:\opengl\gl_env\include\glm\ext\matrix_projection.hpp \
  d:\opengl\gl_env\include\glm\gtc\constants.hpp \
@@ -534,6 +535,8 @@ d:\opengl\gl_env\include\glm\ext\matrix_float2x2_precision.hpp:
 d:\opengl\gl_env\include\glm\simd\integer.h:
 
 ../../../gl_env/include/GLFW/glfw3.h:
+
+src/GameCore/../GLAnimal.h:
 
 src/GameCore/GameBlock.h:
 

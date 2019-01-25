@@ -155,10 +155,11 @@ Debug/src_GameCore_EditSence.cpp.o: src/GameCore/EditSence.cpp \
  ../../../gl_env/include/glm/detail/func_integer_simd.inl \
  d:\opengl\gl_env\include\glm\simd\integer.h \
  ../../../gl_env/include/GLFW/glfw3.h src/GameCore/GameBlockButton.h \
- src/GameCore/../GLButton.h src/GameCore/EventGameMap.h \
- src/GameCore/GameMap.h src/GameCore/GAME.h src/GameCore/GameAnimal.h \
- src/GameCore/../GLShader.h src/GameCore/Game2DMesh.h \
- src/GameCore/../GLWidget2D.h src/GameCore/GameBlock.h \
+ src/GameCore/../GLButton.h src/GameCore/../GLAnimal.h \
+ src/GameCore/GameAnimal.h src/GameCore/../GLShader.h \
+ src/GameCore/Game2DMesh.h src/GameCore/../GLWidget2D.h \
+ src/GameCore/EventGameMap.h src/GameCore/GameMap.h src/GameCore/GAME.h \
+ src/GameCore/GameBlock.h \
  ../../../gl_env/include/glm/gtc/matrix_transform.hpp \
  d:\opengl\gl_env\include\glm\ext\matrix_projection.hpp \
  d:\opengl\gl_env\include\glm\gtc\constants.hpp \
@@ -540,11 +541,7 @@ src/GameCore/GameBlockButton.h:
 
 src/GameCore/../GLButton.h:
 
-src/GameCore/EventGameMap.h:
-
-src/GameCore/GameMap.h:
-
-src/GameCore/GAME.h:
+src/GameCore/../GLAnimal.h:
 
 src/GameCore/GameAnimal.h:
 
@@ -553,6 +550,12 @@ src/GameCore/../GLShader.h:
 src/GameCore/Game2DMesh.h:
 
 src/GameCore/../GLWidget2D.h:
+
+src/GameCore/EventGameMap.h:
+
+src/GameCore/GameMap.h:
+
+src/GameCore/GAME.h:
 
 src/GameCore/GameBlock.h:
 

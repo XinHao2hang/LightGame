@@ -4,8 +4,9 @@
 #include "Game2DMesh.h"
 #include<glm/glm.hpp>
 #include<vector>
+#include "../GLAnimal.h"
 using namespace std;
-class GameAnimal
+class GameAnimal : public GLAnimal 
 {
 protected:
 	//网格
@@ -20,13 +21,15 @@ protected:
 	GLfloat frequency;
 	//纹理动画矩阵,多帧动画
 	glm::mat3 model_mat;
+	glm::mat4 position_mat;
 	vector<glm::mat3> animal_mat;
 	//动画帧数
-	GLuint frame;
-	GLuint frame_num;
+	GLuint frame=0;
+	
 	//矩阵ID
 	GLuint animal_mat_id;
 public:
+	GLuint frame_num;
 	GameAnimal();
 	//初始化动画序列
 	virtual void addAnimalMat(glm::mat3 _mat);
@@ -44,6 +47,10 @@ public:
 	virtual GLuint getTexture();
 	//获取框架
 	virtual Game2DMesh getMesh();
+	//获取位置矩阵
+	virtual void setPos(glm::vec3 pos);
+	//获取位置矩阵
+	virtual glm::mat4 getPosMat();
 	~GameAnimal();
 
 };

@@ -154,7 +154,7 @@ Debug/src_GameCore_GameAnimal.cpp.o: src/GameCore/GameAnimal.cpp \
  ../../../gl_env/include/glm/detail/func_integer.inl \
  ../../../gl_env/include/glm/detail/func_integer_simd.inl \
  d:\opengl\gl_env\include\glm\simd\integer.h \
- ../../../gl_env/include/GLFW/glfw3.h \
+ ../../../gl_env/include/GLFW/glfw3.h src/GameCore/../GLAnimal.h \
  ../../../gl_env/include/glm/gtc/matrix_transform.hpp \
  d:\opengl\gl_env\include\glm\ext\matrix_projection.hpp \
  d:\opengl\gl_env\include\glm\gtc\constants.hpp \
@@ -529,6 +529,8 @@ d:\opengl\gl_env\include\glm\ext\matrix_float2x2_precision.hpp:
 d:\opengl\gl_env\include\glm\simd\integer.h:
 
 ../../../gl_env/include/GLFW/glfw3.h:
+
+src/GameCore/../GLAnimal.h:
 
 ../../../gl_env/include/glm/gtc/matrix_transform.hpp:
 

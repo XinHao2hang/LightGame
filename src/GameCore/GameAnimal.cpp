@@ -55,6 +55,16 @@ GLuint GameAnimal::getTexture()
 {
 	return texture;
 }
+void GameAnimal::setPos(glm::vec3 pos)
+{
+	//设置位置矩阵
+	memset(&position_mat,0,sizeof(glm::mat4));
+	position_mat = glm::translate(glm::mat4(1.0),pos);
+}
+glm::mat4 GameAnimal::getPosMat()
+{
+	return position_mat;
+}
 GameAnimal::~GameAnimal()
 {
 }

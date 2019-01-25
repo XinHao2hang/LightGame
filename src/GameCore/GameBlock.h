@@ -8,6 +8,7 @@
 #include "../Mesh.h"
 #include "../GLWidget2D.h"
 #include "GameAnimal.h"
+#include "GameAnimal.h"
 class BlockMesh : public Widget2DMesh
 {
 public:
@@ -16,6 +17,10 @@ public:
 class GameBlock
 {
 protected:
+	//动画
+	GameAnimal block_animal;
+	//是否使用全局时钟
+	bool isGlobalTimer=false;
 	//块的纹理
 	GLuint texture;
 	//块框架
